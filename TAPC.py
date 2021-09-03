@@ -1,20 +1,28 @@
 import math
 
-shifttime = int(input("How many hours do you work per day? > "))
-wage = int(input("How much do you make per hour? > $"))
+shifttime = int(input("Hours per Day > "))
+wage = int(input("Money per Hour > $"))
 income = shifttime*wage
-goal = int(input("How much do you want to save up? > $"))
-saved = int(input("How much do you have saved? $"))
+goal = int(input("Goal > $"))
+saved = int(input("Current Money Saved > $"))
 
 mtg = goal-saved
 
 ttg = int(mtg)/int(income)
-day = round(ttg, -1)
-week = round(ttg/7, -1)
-month = round(ttg/30, -1)
-year = round(ttg/365, -1)
-print(f"It will take about {day} days,")
-print(f"{week} weeks, {month} months, or {year} years")
-print("to earn that on your current salary.")
+day = round(ttg, 0)
+week = round(ttg/7, 0)
+month = round(ttg/30, 0)
+year = round(ttg/365, 0)
 
+def aot():
+  if 0 <= ttg <= 6:
+    print(f"It will take about {day} days to reach your goal")
+   elif 7 <= ttg <= 29:
+    print(f"It will take about {week} weeks to reach your goal.")
+   elif 30 <= ttg <= 364:
+    print(f"It will take about {month} months to reach your goal.")
+   elif ttg >= year:
+    print(f"It will take about {year} years to reach your goal.")
+print()
+aot()
 input("Thank you for using the TAP-C. Please press enter to exit the program.")
