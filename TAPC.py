@@ -17,11 +17,11 @@ year = round(ttg/365, 0)
 def aot():
   if 0 <= ttg <= 6:
     print(f"It will take about {day} days to reach your goal")
-   elif 7 <= ttg <= 29:
+  elif 7 <= ttg <= 29:
     print(f"It will take about {week} weeks to reach your goal.")
-   elif 30 <= ttg <= 364:
+  elif 30 <= ttg <= 364:
     print(f"It will take about {month} months to reach your goal.")
-   elif ttg >= year:
+  elif ttg >= year:
     print(f"It will take about {year} years to reach your goal.")
 print()
 aot()
