@@ -7,10 +7,10 @@ saved = int(input("Current Money Saved > $"))
 mtg = goal-saved
 
 ttg = int(mtg)/int(income)
-day = round(ttg, 0)
-week = round(ttg/7, 0)
-month = round(ttg/30, 0)
-year = round(ttg/365, 0)
+day = ttg//1
+week = ttg//7
+month = ttg//30
+year = ttg//365
 
 def aot():
   if 0 <= ttg <= 6:
